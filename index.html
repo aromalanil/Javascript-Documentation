@@ -13,13 +13,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
 
-    <link rel="stylesheet" href="./css/style.css">
-
-
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Font-Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Prism Code Highlighter -->
     <link href="./css/prism.css" rel="stylesheet" />
     <!-- Source Sans Pro Font -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600&display=swap" rel="stylesheet">
 
+
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
@@ -29,32 +33,49 @@
 
 
         <!-- Navbar -->
-        <nav id="nav-bar">
+        <nav id="navbar" class='nav-bar'>
             <header class="logo">
                 <img src="./img/JavaScript_logo.svg" alt="JavaScript-logo">
                 <h3>Documentation</h3>
             </header>
 
             <ul id="nav-links">
-                <li class="nav-link"></li>
-                <li class="nav-link"></li>
-                <li class="nav-link"></li>
-                <li class="nav-link"></li>
-                <li class="nav-link"></li>
-                <li class="nav-link"></li>
-                <li class="nav-link"></li>
-                <li class="nav-link"></li>
+                <li class="nav-link"><a href="#intro">Introduction</a></li>
+                <li class="nav-link"><a href="#you-know">What you should already know</a ></li>
+                <li class="nav-link"><a href="#java">JavaScript and Java</a></li> 
+                <li class="nav-link"><a href="#hello">Hello world</a></li> 
+                <li class="nav-link"><a href="#variable">Variables</a></li> 
+                <li class="nav-link"><a href="#declare">Declaring variables</a></li> 
+                <li class="nav-link"><a href="#scope">Variable scope</a></li> 
+                <li class="nav-link"><a href="#global">Global variables</a></li> 
+                <li class="nav-link"><a href="#constant">Constants</a></li> 
+                <li class="nav-link"><a href="#type">Data types</a></li> 
+                <li class="nav-link"><a href="#if-else">if-else statement</a></li> 
+                <li class="nav-link"><a href="#while">while statement</a></li> 
+                <li class="nav-link"><a href="#function">Function declarations</a></li> 
+                <li class="nav-link"><a href="#referance">Reference</a></li> 
             </ul>
 
         </nav>
 
+        <div class="mobile">
+        <div class='mobile-logo'>
+            <header >
+                <img src="./img/JavaScript_logo.svg" alt="JavaScript-logo">
+                <h3>Documentation</h3>
+            </header>
+
+            <img id='menu' src="./img/bars-solid.svg" alt="">
+
+        </div>
+     </div>
 
         <!-- Main Documentation -->
         <main id="main-doc">
 
-            <section class="main-section">
+            <section class="main-section" id="intro">
                 <header>
-                    <h1 class="main-head" id="intro">Introduction</h1>
+                    <h1 class="main-head" >Introduction</h1>
                 </header>
                 <hr>
                 <p class='main-para'>JavaScript is a cross-platform, object-oriented scripting language. It is a small
@@ -74,7 +95,7 @@
 
 
 
-            <section class="main-section">
+            <section class="main-section" id='you-know'>
                 <header>
                     <h1 class="main-head">What you should already know</h1>
                 </header>
@@ -90,9 +111,9 @@
             </section>
 
 
-            <section class="main-section">
+            <section class="main-section" id='java'>
                 <header>
-                    <h1 class="main-head">JavaScript and Java</h1>
+                    <h1 class="main-head" >JavaScript and Java</h1>
                 </header>
                 <hr>
                 <p class="main-para">JavaScript and Java are similar in some ways but fundamentally different in some
@@ -113,7 +134,7 @@
             </section>
 
 
-            <section class="main-section">
+            <section class="main-section" id='hello'>
                 <header>
                     <h1 class="main-head">Hello world</h1>
                 </header>
@@ -138,7 +159,7 @@ greetMe("World");
 
 
 
-            <section class="main-section">
+            <section class="main-section" id='variable'>
                 <header>
                     <h1 class="main-head">Variables</h1>
                 </header>
@@ -157,7 +178,7 @@ greetMe("World");
 
 
 
-            <section class="main-section">
+            <section class="main-section" id='declare'>
                 <header>
                     <h1 class="main-head">Declaring variables</h1>
                 </header>
@@ -198,7 +219,7 @@ let y = 13;
 
 
 
-            <section class="main-section">
+            <section class="main-section" id='scope'>
                 <header>
                     <h1 class="main-head">Variable scope</h1>
                 </header>
@@ -231,7 +252,7 @@ if (true) { let y = 5; } console.log(y); // ReferenceError: y is not defined
             </section>
 
 
-            <section class="main-section">
+            <section class="main-section" id='global'>
                 <header>
                     <h1 class="main-head">Global variables</h1>
                 </header>
@@ -247,7 +268,7 @@ if (true) { let y = 5; } console.log(y); // ReferenceError: y is not defined
             </section>
 
 
-            <section class="main-section">
+            <section class="main-section" id='constant'>
                 <header>
                     <h1 class="main-head">Constants</h1>
                 </header>
@@ -296,7 +317,7 @@ MY_OBJECT.key = "otherValue";
             </section>
 
 
-            <section class="main-section">
+            <section class="main-section" id='type'>
                 <header>
                     <h1 class="main-head">Data types</h1>
                 </header>
@@ -327,7 +348,7 @@ MY_OBJECT.key = "otherValue";
 
 
 
-            <section class="main-section">
+            <section class="main-section" id='if-else'>
                 <header>
                     <h1 class="main-head">if-else statement</h1>
                 </header>
@@ -414,7 +435,7 @@ if ((x = y)) { /* statements here */ }
             </section>
 
 
-            <section class="main-section">
+            <section class="main-section" id='while'>
                 <header>
                     <h1 class="main-head">While statement</h1>
                 </header>
@@ -451,7 +472,7 @@ while (n < 3)
             </section>
 
 
-            <section class="main-section">
+            <section class="main-section" id='function'>
                 <header>
                     <h1 class="main-head">Function declarations</h1>
                 </header>
@@ -487,7 +508,7 @@ return number * number;
             </section>
 
 
-            <section class="main-section">
+            <section class="main-section" id='referance'>
                 <header>
                     <h1 class="main-head">Reference</h1>
                 </header>
