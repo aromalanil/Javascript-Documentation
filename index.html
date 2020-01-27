@@ -1,0 +1,256 @@
+<!-- Author : Aromal Anil -->
+<!-- Start Date : 27-01-2020 07:50 IST -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Javascript : Documentation</title>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="./css/style.css">
+
+
+    <link href="./css/prism.css" rel="stylesheet" />
+    <!-- Source Sans Pro Font -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Full Website Content -->
+    <div id="content">
+
+
+        <!-- Navbar -->
+        <nav id="nav-bar">
+            <header class="logo">
+                <img src="./img/JavaScript_logo.svg" alt="JavaScript-logo">
+                <h3>Documentation</h3>
+            </header>
+
+            <ul id="nav-links">
+                <li class="nav-link"></li>
+                <li class="nav-link"></li>
+                <li class="nav-link"></li>
+                <li class="nav-link"></li>
+                <li class="nav-link"></li>
+                <li class="nav-link"></li>
+                <li class="nav-link"></li>
+                <li class="nav-link"></li>
+            </ul>
+
+        </nav>
+
+
+        <!-- Main Documentation -->
+        <main id="main-doc">
+
+            <section class="main-section">
+                <header>
+                    <h1 class="main-head" id="intro">Introduction</h1>
+                </header>
+                <hr>
+                <p class='main-para'>JavaScript is a cross-platform, object-oriented scripting language. It is a small
+                    and lightweight language. Inside a host environment (for example, a web browser), JavaScript can be
+                    connected to the objects of its environment to provide programmatic control over them.</p>
+                <p class="main-para">JavaScript contains a standard library of objects, such as Array, Date, and Math,
+                    and a core set of language elements such as operators, control structures, and statements. Core
+                    JavaScript can be extended for a variety of purposes by supplementing it with additional objects;
+                    for example:</p>
+                <ul class='main-lists'>
+                    <li class='main-list-item'>Client-side JavaScript extends the core language by supplying objects to
+                        control a browser and its Document Object Model (DOM).</li>
+                    <li class='main-list-item'>Server-side JavaScript extends the core language by supplying objects
+                        relevant to running JavaScript on a server. </li>
+                </ul>
+            </section>
+
+
+
+            <section class="main-section">
+                <header>
+                    <h1 class="main-head">What you should already know</h1>
+                </header>
+                <hr>
+                <p class="main-para">This guide assumes you have the following basic background:</p>
+                <ul class='main-lists'>
+                    <li class='main-list-item'>A general understanding of the Internet and the World Wide Web (WWW).
+                    </li>
+                    <li class='main-list-item'>Good working knowledge of HyperText Markup Language (HTML).</li>
+                    <li class='main-list-item'>Some programming experience. If you are new to programming, try one of
+                        the tutorials linked on the main page about JavaScript.</li>
+                </ul>
+            </section>
+
+
+            <section class="main-section">
+                <header>
+                    <h1 class="main-head">JavaScript and Java</h1>
+                </header>
+                <hr>
+                <p class="main-para">JavaScript and Java are similar in some ways but fundamentally different in some
+                    others. The JavaScript language resembles Java but does not have Java's static typing and strong
+                    type checking. JavaScript follows most Java expression syntax, naming conventions and basic
+                    control-flow constructs which was the reason why it was renamed from LiveScript to JavaScript.</p>
+                <p class="main-para">In contrast to Java's compile-time system of classes built by declarations,
+                    JavaScript supports a runtime system based on a small number of data types representing numeric,
+                    Boolean, and string values. JavaScript has a prototype-based object model instead of the more common
+                    class-based object model. The prototype-based model provides dynamic inheritance; that is, what is
+                    inherited can vary for individual objects. JavaScript also supports functions without any special
+                    declarative requirements. Functions can be properties of objects, executing as loosely typed
+                    methods.</p>
+                <p class="main-para">JavaScript is a very free-form language compared to Java. You do not have to
+                    declare all variables, classes, and methods. You do not have to be concerned with whether methods
+                    are public, private, or protected, and you do not have to implement interfaces. Variables,
+                    parameters, and function return types are not explicitly typed.</p>
+            </section>
+
+
+            <section class="main-section">
+                <header>
+                    <h1 class="main-head">Hello world</h1>
+                </header>
+                <hr>
+                <p class="main-para">To get started with writing JavaScript, open the Scratchpad and write your first
+                    "Hello world" JavaScript code:</p>
+
+                <div class="code-div">
+                    <pre>
+                       <code class='language-javascript'>
+function greetMe(yourName)
+{ 
+  alert("Hello " + yourName); 
+}
+greetMe("World");
+                    </code>
+                </pre>
+                </div>
+
+                <p class="main-para">Select the code in the pad and hit Ctrl+R to watch it unfold in your browser!</p>
+            </section>
+
+
+
+            <section class="main-section">
+                <header>
+                    <h1 class="main-head">Variables</h1>
+                </header>
+                <hr>
+                <p class="main-para">You use variables as symbolic names for values in your application. The names of
+                    variables, called identifiers, conform to certain rules.</p>
+                <p class="main-para">A JavaScript identifier must start with a letter, underscore (_), or dollar sign
+                    ($); subsequent characters can also be digits (0-9). Because JavaScript is case sensitive, letters
+                    include the characters "A" through "Z" (uppercase) and the characters "a" through "z" (lowercase).
+                </p>
+                <p class="main-para">You can use ISO 8859-1 or Unicode letters such as å and ü in identifiers. You can
+                    also use the Unicode escape sequences as characters in identifiers. Some examples of legal names are
+                    Number_hits, temp99, and _name.</p>
+
+            </section>
+
+
+
+            <section class="main-section">
+                <header>
+                    <h1 class="main-head">Declaring variables</h1>
+                </header>
+                <hr>
+                <p class="main-para">You can declare a variable in three ways:<br><br>With the keyword <code>var</code>.
+                    For example,</p>
+
+                <pre>
+                    <code class='language-javascript'>
+var x = 42;
+                 </code>
+             </pre>
+
+
+                <p class="main-para">This syntax can be used to declare both local and global variables.<br><br>By
+                    simply assigning it a value. For example,</p>
+
+                <pre>
+                    <code class='language-javascript'>
+x = 42.
+                 </code>
+             </pre>
+
+                <p class="main-para">This always declares a global variable. It generates a strict JavaScript warning.
+                    You shouldn't use this variant.<br><br>With the keyword let. For example,</p>
+
+                <pre>
+                <code class='language-javascript'>
+let y = 13;
+             </code>
+         </pre>
+
+                <p class="main-para">This syntax can be used to declare a block scope local variable. See Variable scope
+                    below.</p>
+
+
+            </section>
+
+
+
+            <section class="main-section">
+                <header>
+                    <h1 class="main-head">Variable scope</h1>
+                </header>
+                <hr>
+                <p class="main-para">When you declare a variable outside of any function, it is called a global
+                    variable, because it is available to any other code in the current document. When you declare a
+                    variable within a function, it is called a local variable, because it is available only within that
+                    function.</p>
+                <p class="main-para">JavaScript before ECMAScript 2015 does not have block statement scope; rather, a
+                    variable declared within a block is local to the function (or global scope) that the block resides
+                    within. For example the following code will log 5, because the scope of x is the function (or global
+                    context) within which x is declared, not the block, which in this case is an if statement.</p>
+
+                <pre>
+                    <code class='language-javascript'>
+if (true) { var x = 5; } console.log(x); // 5
+                 </code>
+             </pre>
+
+
+                <p class="main-para">This behavior changes, when using the let declaration introduced in ECMAScript
+                    2015.</p>
+
+                    <pre>
+                        <code class='language-javascript'>
+if (true) { let y = 5; } console.log(y); // ReferenceError: y is not defined
+                     </code>
+                 </pre>
+
+            </section>
+
+
+            <section class="main-section">
+                <header>
+                    <h1 class="main-head">Global variables</h1>
+                </header>
+                <hr>
+                <p class="main-para">Global variables are in fact properties of the global object. In web pages the global object is window, so you can set and access global variables using the window.variable syntax.</p>
+                <p class="main-para">Consequently, you can access global variables declared in one window or frame from another window or frame by specifying the window or frame name. For example, if a variable called phoneNumber is declared in a document, you can refer to this variable from an iframe as parent.phoneNumber.</p>
+                
+            </section>
+
+
+        </main>
+
+
+
+    </div>
+
+
+    <script src="./js/prism.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

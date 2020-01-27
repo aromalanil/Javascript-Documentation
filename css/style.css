@@ -1,0 +1,123 @@
+/* StyleSheet for Javascript Documentation 
+
+Author : Aromal Anil
+Github : github.com/aromalanil
+
+*/
+
+
+
+/* General Styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --green: #42B983;
+    --blue: #2973B7;
+    --red: #D63200;
+    --purple: #A32EFF;
+    --text-default:#304455;
+    --text-bold:#273849;
+}
+
+body {
+    font-size: 14px;
+    font-family: 'Source Sans Pro', sans-serif;
+    scroll-behavior: smooth;
+}
+
+h1 {
+    font-size: 2rem;
+    color:var(--text-bold);
+}
+
+h2 {
+    font-size: 1.5rem;
+    color:var(--text-bold);
+}
+h3{
+    font-size: 1.3rem;
+    color:var(--text-bold);
+}
+
+p {
+    font-size: 1rem;
+    color:var(--text-default)
+}
+
+
+
+/* Custom Styling */
+
+#nav-bar {
+    position:fixed;
+    left:0;
+    top:0;
+    width:300px;
+    height: 100vh;
+    background-color: rgb(202, 220, 247);
+   
+}
+.logo{
+    
+    margin-top:50px;
+    margin-left:10%;
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    margin-right: 10px;
+    width: 40px;
+}
+
+#intro{
+    font-size: 2.5rem;
+}
+
+#main-doc
+{
+    padding-top:50px;
+    margin-left:300px;
+    height: 100vh;
+}
+
+.main-section{
+    margin: auto;
+    margin-top:80px;
+    width:80%;
+    padding-right:20%;
+}
+
+.main-head{
+    margin-bottom: 10px;
+}
+hr{
+
+   border:.5px solid #27384938;
+}
+.main-para{
+    margin-top: 10px;
+    margin-bottom:20px;
+    text-align: justify;
+}
+
+.main-lists{
+    text-align: justify;
+    padding-left:10%;
+    margin-top:50px;
+    margin-bottom:50px;
+}
+.main-list-item{
+    margin-top: 10px;
+    color:var(--text-default);
+    font-size:1rem;
+}
+
+.code-div{
+    background-color: #fff;
+}
