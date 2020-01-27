@@ -121,3 +121,14 @@ hr{
 .code-div{
     background-color: #fff;
 }
+
+li ul{
+    margin-top:10px;
+    margin-bottom:10px;
+    padding-left: 40px;
+}
+li ul li{
+    text-align: justify;
+    margin-top:5px;
+    margin-bottom:5px;
+}

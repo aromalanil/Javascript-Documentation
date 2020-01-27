@@ -222,7 +222,7 @@ if (true) { var x = 5; } console.log(x); // 5
                 <p class="main-para">This behavior changes, when using the let declaration introduced in ECMAScript
                     2015.</p>
 
-                    <pre>
+                <pre>
                         <code class='language-javascript'>
 if (true) { let y = 5; } console.log(y); // ReferenceError: y is not defined
                      </code>
@@ -236,11 +236,264 @@ if (true) { let y = 5; } console.log(y); // ReferenceError: y is not defined
                     <h1 class="main-head">Global variables</h1>
                 </header>
                 <hr>
-                <p class="main-para">Global variables are in fact properties of the global object. In web pages the global object is window, so you can set and access global variables using the window.variable syntax.</p>
-                <p class="main-para">Consequently, you can access global variables declared in one window or frame from another window or frame by specifying the window or frame name. For example, if a variable called phoneNumber is declared in a document, you can refer to this variable from an iframe as parent.phoneNumber.</p>
-                
+                <p class="main-para">Global variables are in fact properties of the global object. In web pages the
+                    global object is window, so you can set and access global variables using the window.variable
+                    syntax.</p>
+                <p class="main-para">Consequently, you can access global variables declared in one window or frame from
+                    another window or frame by specifying the window or frame name. For example, if a variable called
+                    phoneNumber is declared in a document, you can refer to this variable from an iframe as
+                    parent.phoneNumber.</p>
+
             </section>
 
+
+            <section class="main-section">
+                <header>
+                    <h1 class="main-head">Constants</h1>
+                </header>
+                <hr>
+                <p class="main-para">You can create a read-only, named constant with the const keyword. The syntax of a
+                    constant identifier is the same as for a variable identifier: it must start with a letter,
+                    underscore or dollar sign and can contain alphabetic, numeric, or underscore characters.</p>
+
+                <pre>
+                    <code class='language-javascript'>
+const PI = 3.14;
+                 </code>
+             </pre>
+
+                <p class="main-para">A constant cannot change value through assignment or be re-declared while the
+                    script is running. It has to be initialized to a value.<br><br>The scope rules for constants are the
+                    same as those for let block scope variables. If the const keyword is omitted, the identifier is
+                    assumed to represent a variable.<br><br>You cannot declare a constant with the same name as a
+                    function or variable in the same scope. For example:</p>
+
+                <pre>
+                    <code class='language-javascript'>
+// THIS WILL CAUSE AN ERROR 
+function f() {}; 
+const f = 5; 
+
+// THIS WILL CAUSE AN ERROR ALSO 
+function f() 
+{ 
+  const g = 5; 
+  var g; //statements
+}
+                 </code>
+             </pre>
+
+                <p class="main-para">However, object attributes are not protected, so the following statement is
+                    executed without problems.</p>
+
+                <pre>
+                <code class='language-javascript'>
+const MY_OBJECT = {"key": "value"}; 
+MY_OBJECT.key = "otherValue";
+             </code>
+         </pre>
+
+            </section>
+
+
+            <section class="main-section">
+                <header>
+                    <h1 class="main-head">Data types</h1>
+                </header>
+                <hr>
+                <p class="main-para">The latest ECMAScript standard defines seven data types:</p>
+
+                <ul class='main-lists'>
+                    <li class='main-list-item'>Six data types that are primitives:
+                        <ul>
+                            <li>Boolean : true and false.</li>
+                            <li>null : A special keyword denoting a null value.</li>
+                            <li>undefined</li>
+                            <li>Number : 42 or 3.14159.</li>
+                            <li>String : eg: "Howdey"</li>
+                            <li>Symbol (new in ECMAScript 2015)</li>
+                        </ul>
+                    </li>
+                    <li class='main-list-item'>and Object</li>
+
+                </ul>
+
+                <p class="main-para">Although these data types are a relatively small amount, they enable you to perform
+                    useful functions with your applications. Objects and functions are the other fundamental elements in
+                    the language. You can think of objects as named containers for values, and functions as procedures
+                    that your application can perform.</p>
+
+            </section>
+
+
+
+            <section class="main-section">
+                <header>
+                    <h1 class="main-head">if-else statement</h1>
+                </header>
+                <hr>
+                <p class="main-para">Use the if statement to execute a statement if a logical condition is true. Use the
+                    optional else clause to execute a statement if the condition is false. An if statement looks as
+                    follows:</p>
+
+
+                <pre>
+                    <code class='language-javascript'>
+if (condition) 
+{
+     statement_1; 
+} 
+else 
+{ 
+    statement_2; 
+}
+                 </code>
+             </pre>
+
+                <p class="main-para">condition can be any expression that evaluates to true or false. See Boolean for an
+                    explanation of what evaluates to true and false. If condition evaluates to true, statement_1 is
+                    executed; otherwise, statement_2 is executed. statement_1 and statement_2 can be any statement,
+                    including further nested if statements. <br><br>You may also compound the statements using else if
+                    to have multiple conditions tested in sequence, as follows: </p>
+
+                <pre>
+                    <code class='language-javascript'>
+if (condition_1) 
+{ 
+    statement_1; 
+} 
+else if (condition_2) 
+{ 
+    statement_2;                  
+} 
+else 
+{ 
+    statement_last; 
+}
+                 </code>
+             </pre>
+
+
+                <p class="main-para">In the case of multiple conditions only the first logical condition which evaluates
+                    to true will be executed. To execute multiple statements, group them within a block statement ({ ...
+                    }) . In general, it's good practice to always use block statements, especially when nesting if
+                    statements:</p>
+
+                <pre>
+                    <code class='language-javascript'>
+if (condition) 
+{   statement_1_runs_if_condition_is_true;
+    statement_2_runs_if_condition_is_true; 
+} else 
+{
+    statement_3_runs_if_condition_is_false;
+    statement_4_runs_if_condition_is_false; 
+}
+                 </code>
+             </pre>
+
+                <p class="main-para">It is advisable to not use simple assignments in a conditional expression, because
+                    the assignment can be confused with equality when glancing over the code. For example, do not use
+                    the following code:</p>
+
+                <pre>
+                    <code class='language-javascript'>
+if (x = y) { /* statements here */ }
+                 </code>
+             </pre>
+
+                <p class="main-para">If you need to use an assignment in a conditional expression, a common practice is
+                    to put additional parentheses around the assignment. For example:</p>
+
+                <pre>
+                    <code class='language-javascript'>
+if ((x = y)) { /* statements here */ }
+                 </code>
+             </pre>
+
+            </section>
+
+
+            <section class="main-section">
+                <header>
+                    <h1 class="main-head">While statement</h1>
+                </header>
+                <hr>
+                <p class="main-para">If the condition becomes false, statement within the loop stops executing and
+                    control passes to the statement following the loop.<br><br>The condition test occurs before
+                    statement in the loop is executed. If the condition returns true, statement is executed and the
+                    condition is tested again. If the condition returns false, execution stops and control is passed to
+                    the statement following while.<br><br>To execute multiple statements, use a block statement ({ ...
+                    }) to group those statements.<br><br>Example:<br><br>The following while loop iterates as long as n
+                    is less than three:</p>
+
+                    <pre>
+                        <code class='language-javascript'>
+var n = 0; 
+var x = 0; 
+while (n < 3) 
+{ 
+    n++; x += n; 
+}
+                     </code>
+                 </pre>
+
+                <p class="main-para">With each iteration, the loop increments n and adds that value to x. Therefore, x and n take on the following values:</p>
+                    
+                <ul class='main-lists'>
+                    <li class='main-list-item'>After the first pass: n = 1 and x = 1</li>
+                    <li class='main-list-item'>After the second pass: n = 2 and x = 3</li>
+                    <li class='main-list-item'>After the third pass: n = 3 and x = 6</li>
+                </ul>
+                
+                <p class="main-para">After completing the third pass, the condition n < 3 is no longer true, so the loop terminates.</p>
+
+            </section>
+
+
+            <section class="main-section">
+                <header>
+                    <h1 class="main-head">Function declarations</h1>
+                </header>
+                <hr>
+                <p class="main-para">A function definition (also called a function declaration, or function statement) consists of the function keyword, followed by:</p>
+                <ul class='main-lists'>
+                    <li class='main-list-item'>The name of the function.</li>
+                    <li class='main-list-item'>A list of arguments to the function, enclosed in parentheses and separated by commas.</li>
+                    <li class='main-list-item'>The JavaScript statements that define the function, enclosed in curly brackets, { }.</li>
+                </ul>
+
+                <p class="main-para">For example, the following code defines a simple function named square:</p>
+
+                <pre>
+                    <code class='language-javascript'>
+function square(number) 
+{ 
+    return number * number; 
+}
+                 </code>
+             </pre>
+
+                <p class="main-para">The function square takes one argument, called number. The function consists of one statement that says to return the argument of the function (that is, number) multiplied by itself. The return statement specifies the value returned by the function.</p>
+                
+                <pre>
+                    <code class='language-javascript'>
+return number * number;
+                 </code>
+             </pre>
+                
+                <p class="main-para">Primitive parameters (such as a number) are passed to functions by value; the value is passed to the function, but if the function changes the value of the parameter, this change is not reflected globally or in the calling function.</p>
+               
+            </section>
+
+
+            <section class="main-section">
+                <header>
+                    <h1 class="main-head">Reference</h1>
+                </header>
+                <hr>
+                <p class="main-para">All the documentation in this page is taken from <a target='_blank' href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide">MDN</a></p>
+            </section>
 
         </main>
 
