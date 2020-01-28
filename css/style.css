@@ -14,7 +14,8 @@ Github : github.com/aromalanil
     padding: 0;
     box-sizing: border-box;
 }
-html{
+
+html {
     scroll-behavior: smooth;
 }
 
@@ -23,8 +24,8 @@ html{
     --blue: #2973B7;
     --red: #D63200;
     --purple: #A32EFF;
-    --text-default:#304455;
-    --text-bold:#273849;
+    --text-default: #304455;
+    --text-bold: #273849;
 }
 
 body {
@@ -34,21 +35,22 @@ body {
 
 h1 {
     font-size: 2rem;
-    color:var(--text-bold);
+    color: var(--text-bold);
 }
 
 h2 {
     font-size: 1.5rem;
-    color:var(--text-bold);
+    color: var(--text-bold);
 }
-h3{
+
+h3 {
     font-size: 1.3rem;
-    color:var(--text-bold);
+    color: var(--text-bold);
 }
 
 p {
     font-size: 1rem;
-    color:var(--text-default)
+    color: var(--text-default)
 }
 
 
@@ -57,169 +59,205 @@ p {
 
 
 .nav-bar {
-    position:fixed;
-    left:0;
-    top:0;
-    width:300px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 300px;
     height: 100vh;
-    background-color:  rgba(65, 174, 121, 0.151);
-    overflow-y: scroll; 
+    background-color: rgb(191, 241, 217);
+    overflow-y: scroll;
 }
 
-#nav-links{
+#nav-links {
     margin-top: 50px;
     margin-left: 10%;
     list-style: none;
 }
-.nav-link
-{
+
+.nav-link {
     margin-top: 15px;
     margin-bottom: 15px;
-    font-size:1.05rem;
+    font-size: 1.05rem;
 }
-.nav-link a{
+:target{
+    padding-top:60px;
+} 
+
+.nav-link a {
     color: var(--text-bold);
     text-decoration: none;
     font-weight: 400;
 }
-.nav-link a:hover{
-    padding:1% 3%;
+
+.nav-link a:hover {
+    padding: 1% 3%;
     margin-left: -2%;
     border-radius: 5px;
     background-color: var(--blue);
     color: #fff;
 }
 
-.logo{
+.logo {
     background-color: rgba(65, 174, 121, 0.795);
-    padding-top:50px;
-    padding-left:10%;
-    padding-bottom:10%;
+    padding-top: 50px;
+    padding-left: 10%;
+    padding-bottom: 10%;
     display: flex;
     align-items: center;
 }
 
-.logo img{
+.logo img {
     margin-right: 10px;
     width: 40px;
 }
 
-.logo h3{
+.logo h3 {
     font-size: 1.4rem;
-    color:black;
+    color: black;
 }
 
-#intro{
+#intro {
     font-size: 2.5rem;
 }
 
-#main-doc
-{
-    padding-top:50px;
-    margin-left:300px;
+#main-doc {
+    padding-top: 50px;
+    margin-left: 300px;
 }
 
-.main-section{
+.main-section {
     margin: auto;
-    margin-top:80px;
-    width:80%;
-    padding-right:20%;
+    margin-top: 80px;
+    width: 80%;
+    padding-right: 20%;
 }
 
-.main-head{
+.main-head {
     margin-bottom: 10px;
 }
-hr{
 
-   border:.5px solid #27384938;
+hr {
+
+    border: .5px solid #27384938;
 }
-.main-para{
+
+.main-para {
     margin-top: 10px;
-    margin-bottom:20px;
+    margin-bottom: 20px;
     text-align: justify;
 }
 
-.main-lists{
+.main-lists {
     text-align: justify;
-    padding-left:10%;
-    margin-top:50px;
-    margin-bottom:50px;
-}
-.main-list-item{
-    margin-top: 10px;
-    color:var(--text-default);
-    font-size:1rem;
+    padding-left: 10%;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
-.code-div{
+.main-list-item {
+    margin-top: 10px;
+    color: var(--text-default);
+    font-size: 1rem;
+}
+
+.code-div {
     background-color: #fff;
 }
 
-li ul{
-    margin-top:10px;
-    margin-bottom:10px;
+li ul {
+    margin-top: 10px;
+    margin-bottom: 10px;
     padding-left: 40px;
 }
-li ul li{
+
+li ul li {
     text-align: justify;
-    margin-top:5px;
-    margin-bottom:5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 
-.mobile-logo{
-   
+.mobile-logo {
+
     position: fixed;
-    top:0;
-    left:0;
-    width:100vw;
+    top: 0;
+    left: 0;
+    width: 100vw;
     padding-left: 5vw;
     padding-right: 5vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color:white;
-    height:60px;
+    background-color: white;
+    height: 60px;
+    display: none;
 
 }
-.mobile-logo header{
+.floatingNav {
+    box-shadow: 0px 1px 10px #999;
+  }
+
+.mobile-logo header {
     display: flex;
     align-items: center;
 }
-.mobile-logo header img{
-    width:40px;
+
+.mobile-logo header img {
+    width: 40px;
     margin-right: 10px;
 }
 
-#menu{
-    width:30px;
-}
-
-.navBarVisible {
-    left:0px;
+#menu {
+    width: 25px;
 }
 
 
-@media only screen and (max-width:1300px)
-{
 
-    .main-section{
-        padding-right:0%;
-        
+
+@media only screen and (max-width:1300px) {
+
+    .main-section {
+        padding-right: 0%;
+
     }
 
 }
 
-@media only screen and (max-width:1152px)
-{
+@media only screen and (max-width:1152px) {
 
-    #main-doc
-    {
-    margin-left:0;
+    .mobile-logo{
+        display: flex;
+        z-index: 20;
     }
+    #main-doc {
+        margin-left: 0;
+    }
+
     .nav-bar {
-        position:fixed;
-        left:-300px;
+
+        z-index: 99;
+        position: fixed;
+        left:  -300px;
+        transition: .3s;
+        opacity: .7;
+    }
+
+    
+
+    .navBarVisible {
+        opacity: 1;
+        left: 0px;
+    }
+
+}
+@media only screen and (max-width:680px) {
+    .nav-bar {
+        width:280px;
+        left:-280px;
+    }
+    .navBarVisible {
+        opacity: 1;
+        left: 0px;
     }
 
 }
