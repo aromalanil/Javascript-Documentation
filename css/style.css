@@ -1,9 +1,12 @@
 /* StyleSheet for Javascript Documentation 
 
-Author : Aromal Anil
-Github : github.com/aromalanil
+@author : Aromal Anil
+@github : github.com/aromalanil/javascript-documentation
 
 */
+
+
+
 
 
 
@@ -56,8 +59,14 @@ p {
 
 
 
-/* Custom Styling */
 
+
+
+
+
+
+
+/* Custom Styling */
 
 .nav-bar {
     position: fixed;
@@ -216,6 +225,8 @@ li ul li {
 
 
 
+
+/* Responsive Styling */
 
 @media only screen and (max-width:1300px) {
 
